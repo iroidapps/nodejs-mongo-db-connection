@@ -1,0 +1,14 @@
+<html lang="en">
+	<head>
+	  		<meta charset="UTF-8">
+	  		<title>MY APP</title>
+	</head>
+	<body>	
+	  		<form action="/quotes" method="POST">
+	  		  <input type="text" placeholder="name" name="name" value="<%= (quotes.length > 0) ? quotes[0].name : ''  %>">
+	  		  <input type="text" placeholder="quote" name="quote" value="<%= (quotes.length > 0) ? quotes[0].quote : ''  %>">
+	  		  <input type="hidden" name="q_id" value="<%= (quotes.length > 0) ? quotes[0]._id : '' %>">
+	  		  <button type="submit">Submit</button>
+	  		</form>
+	</body>
+</html>

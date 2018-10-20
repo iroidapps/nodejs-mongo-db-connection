@@ -1,0 +1,15 @@
+     <a href="/quotes_addEdit">Add New</a>
+     <ul class="quotes">
+        <% if(quotes.length > 0) { %>
+          <% for(var i=0; i<quotes.length; i++) {%>
+            <li class="quote">
+              <span><%= quotes[i].name %></span>
+              <span><%= quotes[i].quote %></span>
+              <span><a href="quotes_addEdit/<%= quotes[i]._id %>">U</a></span>
+               <span><a href="delete_quotes/<%= quotes[i]._id %>">X</a></span>
+            </li>
+          <% } 
+          }%>
+     </ul>  
+  </body>
+</html>
